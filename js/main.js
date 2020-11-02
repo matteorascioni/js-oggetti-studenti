@@ -16,27 +16,27 @@ $(document).ready(function() {
      * Array di oggetti studenti
      */
     //  var arrayStudenti = [
-    //     studente = { 
+    //      { 
     //         nome: 'Matteo',
     //         cognome: 'Rascioni',
     //         età: 23,
     //      },
-    //     studente = { 
+    //      { 
     //         nome: 'Paolo',
     //         cognome: 'Duzioni',
     //         età: 30,
     //     },
-    //     studente = { 
+    //      { 
     //         nome: 'Fabio',
     //         cognome: 'Giorgini',
     //         età: 40,
     //     },
-    //     studente = { 
+    //      { 
     //         nome: 'Marco',
     //         cognome: 'Rossi',
     //         età: 30,
     //     },
-    //     studente = { 
+    //     { 
     //         nome: 'Matteo',
     //         cognome: 'Rossi',
     //         età: 50,
@@ -44,20 +44,59 @@ $(document).ready(function() {
     //  ]
 
     //  for (var i = 0; i < arrayStudenti.length; i++) {
-    //     console.log('Nome: ' + arrayStudenti[i].nome, 'Cognome: ' + arrayStudenti[i].cognome, 'Età: ' + arrayStudenti[i].età  );
+    //     var student = arrayStudenti[i];
+
+    //     console.log('studente ' + (i + 1));
+    //     console.log('Nome ', student.nome);
+    //     console.log('Cognome ', student.cognome);
+    //     console.log('Età ', student.età);
+    //     console.log('-------------------------');
     //  }
 
     /**
      * 3 promp per l'utente e possibilità di aggiungere oggetti all'array 
      */
-        // studenteAdd = {
-        //     nome: prompt('Inserisci il nome da aggiungere'), 
-        //     cognome: prompt('Inserisci il cognome da aggiungere'),
-        //     età: prompt('Inserisci l\' età'),
-        // };
+        var arrayStudenti = [
+            { 
+                nome: 'Matteo',
+                cognome: 'Rascioni',
+                età: 23,
+            },
+            { 
+                nome: 'Paolo',
+                cognome: 'Duzioni',
+                età: 30,
+            },
+            { 
+                nome: 'Fabio',
+                cognome: 'Giorgini',
+                età: 40,
+            },
+            { 
+                nome: 'Marco',
+                cognome: 'Rossi',
+                età: 30,
+            },
+            { 
+                nome: 'Matteo',
+                cognome: 'Rossi',
+                età: 50,
+            },
+        ]
+
+        newNome = prompt('Inserisci il nome da aggiungere').trim();
+        newCognome =  prompt('Inserisci il cognome da aggiungere').trim();
+        newEtà = parseInt( prompt('Inserisci l\' età').trim() );
+     
     
-        // arrayStudenti.push(studenteAdd);
-        // console.log('Nome: ' + arrayStudenti[i].nome, 'Cognome: ' + arrayStudenti[i].cognome, 'Età: ' + arrayStudenti[i].età  );
+      arrayStudenti.push ({
+          nome: newNome,
+          cognome: newCognome,
+          età: newEtà,
+      })
+
+      console.log(arrayStudenti);
+      console.table(arrayStudenti);
 
      
 
